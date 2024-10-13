@@ -287,6 +287,7 @@ Go to the Resources tab, you can click the Instance id which takes you to AWS EC
 Go to the Outputs tab to retrieve useful information like the instance ID.
 
 ![CF_Stack_Resources](Images\CF_Stack_resources.png)
+
 ### Step 9: Clean Up
 To avoid ongoing costs, you can delete the stack after you're done testing:
 
