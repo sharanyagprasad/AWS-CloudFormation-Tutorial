@@ -257,7 +257,9 @@ aws cloudformation validate-template --template-body file://ec2-instance-templat
 ```
 
 If successful, the output shows the details of the parameters and description from your CloudFormation template.
+
 ![CF_Stack_Validation](Images\CF_Stack_validaton.png)
+
 ### Step 2: Deploy the CloudFormation Stack
 Deploy the CloudFormation stack using the AWS CLI:
 
