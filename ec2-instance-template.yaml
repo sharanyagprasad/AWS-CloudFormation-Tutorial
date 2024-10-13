@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Create EC2 Instance"
+
+#3
+Parameters:
+    InstanceParameter:
+        # Description: Select Instance type
+        Type: String
+        Default: t2.micro 
+        AllowedValues: #drop-down for user to select
+          - t2.micro
+          - m1.small
+          - m1.large
+        Description: Enter either of the above allowed instance type. By default t2.micro is selected.
+
+#1
+Resources:
+    Instance: #logical id/name within the stack
+        Type: AWS::EC2::Instance
+        Properties:
+            InstanceType: !Ref InstanceParameter
+            ImageId: ami-0084a47cc718c111a # check the location where you want to build the image. As the image AMI
+            # are different for each location.
+
+
+#2
+Outputs:
+    InstanceName:
+        Value: !Ref 'Instance'
